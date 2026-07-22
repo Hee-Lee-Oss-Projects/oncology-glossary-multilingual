@@ -1,6 +1,6 @@
 # Competitive & Improvement Analysis — `oncology-glossary-multilingual`
 
-Analyst review of the Elyos cancer-research good-deed project that builds an open, multilingual,
+Analyst review of the Hee-Lee Oss cancer-research good-deed project that builds an open, multilingual,
 plain-language glossary of oncology and clinical-trial terms for patients and caregivers.
 **Risk posture: HIGH, patient-facing.** A mistranslated medical term can cause real harm, so the
 spine of any verdict here is the human medical-translation review and clinical sign-off, not the
@@ -230,7 +230,7 @@ reviewed + low-resource oncology/clinical-trial terms.** That intersection is th
 6. **Disambiguation / false-friend safety layer** ("positive margin," benign/malignant,
    progression/remission, "stable disease") — an explicit, reviewed harm-prevention asset.
 7. **A reusable medical-terminology *translation pipeline*** (the methodology + tooling), not just
-   the data — reusable across the Elyos cancer/translation portfolio.
+   the data — reusable across the Hee-Lee Oss cancer/translation portfolio.
 
 ---
 
@@ -282,7 +282,7 @@ reviewed + low-resource oncology/clinical-trial terms.** That intersection is th
   descriptive gloss flagged `coined`, but a **native speaker + community validation** decides what
   ships — Claude must not invent and present a neologism as established.
 - **Cultural adaptation is by native speakers**, not the model; Claude output is advisory.
-- **No advice/dosing/diagnosis authoring** — Claude refuses and flags, per Elyos guardrails.
+- **No advice/dosing/diagnosis authoring** — Claude refuses and flags, per Hee-Lee Oss guardrails.
 
 (If a funded lane is ever used for surge drafting, it stays within a hard per-task escrow cap and
 still feeds the same human gates — drafting only.)

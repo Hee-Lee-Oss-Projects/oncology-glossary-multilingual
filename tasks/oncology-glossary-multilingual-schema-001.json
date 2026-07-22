@@ -11,7 +11,7 @@
   "deliverable": "pr",
   "tokenEstimate": "medium",
   "status": "open",
-  "context": "oncology-glossary-multilingual builds an open, multilingual, plain-language glossary of oncology and clinical-trial terms. Structured content schemas and CI validation are essential to enforce safety-critical fields (notMedicalAdvice, sourceRefs, reviewer sign-offs) consistently. The schema lives in the agent-neutral core (packages/schema) per Elyos architecture rules; no vendor/agent-specific logic belongs in adapters.",
+  "context": "oncology-glossary-multilingual builds an open, multilingual, plain-language glossary of oncology and clinical-trial terms. Structured content schemas and CI validation are essential to enforce safety-critical fields (notMedicalAdvice, sourceRefs, reviewer sign-offs) consistently. The schema lives in the agent-neutral core (packages/schema) per Hee-Lee Oss architecture rules; no vendor/agent-specific logic belongs in adapters.",
   "objective": "Add termSourceAllowListSchema, glossaryEntrySchema, glossaryTranslationSchema, and reviewSchema to packages/schema/src/schemas.ts, compiled via validate.ts (AJV + ajv-formats), and wire a structural-check script into pnpm test so CI fails on any non-conformant content file.",
   "acceptanceCriteria": [
     "packages/schema/src/schemas.ts includes termSourceAllowListSchema, glossaryEntrySchema, glossaryTranslationSchema, and reviewSchema compiled with AJV and ajv-formats",
@@ -21,7 +21,7 @@
     "YAML artifacts in sources/ and glossary/ are parsed to JSON and validated by the structural-check script"
   ],
   "resources": [
-    "C:/code/elyos/packages/schema/src/schemas.ts",
+    "C:/code/hee-lee-oss/packages/schema/src/schemas.ts",
     "sources/term-source-allow-list.yaml (from sources-001)",
     "PLAN.md — data model section for artifact structures"
   ],

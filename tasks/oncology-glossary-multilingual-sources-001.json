@@ -22,9 +22,9 @@
     "File validates against the project content schema and passes CI structural checks"
   ],
   "resources": [
-    "C:/code/elyos/planning/projects/oncology-glossary-multilingual/PLAN.md",
-    "C:/code/elyos/planning/ROADMAP.md",
-    "C:/code/elyos/docs/good-deed-definition.md",
+    "C:/code/hee-lee-oss/planning/projects/oncology-glossary-multilingual/PLAN.md",
+    "C:/code/hee-lee-oss/planning/ROADMAP.md",
+    "C:/code/hee-lee-oss/docs/good-deed-definition.md",
     "NCI Dictionary of Cancer Terms (verify current license/attribution)",
     "ClinicalTrials.gov Learn About Studies / glossary (US Gov, verify embedded third-party)",
     "MeSH and MedlinePlus content-use notices (verify per item for embedded copyrighted content)"

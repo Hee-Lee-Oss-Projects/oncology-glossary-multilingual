@@ -18,7 +18,7 @@
     "CI fails hard (non-zero exit) if any of the above checks fails for any deliverable",
     "The check is wired into pnpm test so it runs on every PR",
     "pnpm build && pnpm test && pnpm lint pass on the PR",
-    "Implementation lives in the agent-neutral core (packages/schema or tooling/) per Elyos architecture rules, not in adapters/"
+    "Implementation lives in the agent-neutral core (packages/schema or tooling/) per Hee-Lee Oss architecture rules, not in adapters/"
   ],
   "resources": [
     "docs/license-provenance-check.md (license-001)",

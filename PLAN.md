@@ -4,7 +4,7 @@
 
 ## Executive summary
 
-`oncology-glossary-multilingual` is an Elyos good-deed project that builds an **open, multilingual,
+`oncology-glossary-multilingual` is a Hee-Lee Oss good-deed project that builds an **open, multilingual,
 plain-language glossary of oncology and clinical-trial terminology for patients and caregivers** —
 the words a newly-diagnosed person, a family caregiver, or a trial participant runs into ("adjuvant
 therapy," "randomized," "metastatic," "neutropenia," "informed consent," "progression-free
@@ -14,7 +14,7 @@ authoritative source it was derived from, and a standing **"not medical advice �
 team"** notice, translated into many languages while preserving clinical meaning.
 
 This is a **HIGH risk-tier** project because the output is **patient-facing health content**. Under
-the Elyos good-deed definition, HIGH risk requires **credentialed expert sign-off before merge**.
+the Hee-Lee Oss good-deed definition, HIGH risk requires **credentialed expert sign-off before merge**.
 This project therefore makes a **two-stage, blocking human-review gate** the spine of the pipeline,
 not a footer:
 
@@ -31,7 +31,7 @@ An entry that fails either gate is not shipped. **Unreviewed definitions are nev
 **untranslated-but-unreviewed text is never published.**
 
 The work runs in the **donated lane**: a human runs their own coding agent interactively to draft
-candidate entries and translations and to open PRs; the Elyos CLI only prepares workspaces and opens
+candidate entries and translations and to open PRs; the Hee-Lee Oss CLI only prepares workspaces and opens
 PRs — it never invokes an agent or runs headless. The funded lane is out of scope for v0.1.
 
 **Binding cancer-domain guardrails (see Data, licensing & compliance — this is the lead section).**
@@ -229,7 +229,7 @@ carry the standing "not medical advice" notice.
 ## Solution approach & architecture
 
 This is primarily a **content/data pipeline** project (deliverables are reviewed glossary entries +
-their translations + provenance), with light agent-neutral tooling. It rides on existing Elyos
+their translations + provenance), with light agent-neutral tooling. It rides on existing Hee-Lee Oss
 donated-lane mechanics (CLI prepares workspace; human runs their agent; PR opened; human/expert
 review gates "done").
 
@@ -342,7 +342,7 @@ Only allow-listed, terms-verified sources may be used. Preferred (verify each pe
   (e.g., A.D.A.M. encyclopedia)**; **do not assume reusable — verify per item.**
 
 **Excluded unless explicitly permitted (recorded as `restricted` with `exclusionReason`):**
-- **COSMIC, OncoKB** — non-commercial / restricted (per Elyos cancer guardrails). Excluded.
+- **COSMIC, OncoKB** — non-commercial / restricted (per Hee-Lee Oss cancer guardrails). Excluded.
 - **SNOMED CT** — member-licensed. Excluded absent a confirmed license.
 - **ICD-O / ICD-11** — WHO copyright with its own reuse terms; treat as restricted, verify before any
   use, include required WHO attribution if ever permitted.
@@ -423,7 +423,7 @@ more conservative reading wins** and the disputed entry is held back. Recorded i
 explicit uncertainty flags** — one per flag of the form
 `UNCERTAIN: <termId/location> | <type: term|negation|advice-creep|cultural|ambiguous-source> | <note>` —
 for anything it is unsure of, **and must refuse outright** to author advice/dosing/diagnostic content
-(flagging it instead per Elyos refusal guardrails). Flags are copied into the review artifact as
+(flagging it instead per Hee-Lee Oss refusal guardrails). Flags are copied into the review artifact as
 `agentFlags`. **No sign-off may be recorded while any flag is unresolved**: each must be `resolved`
 (reviewer adjudication) or `accepted-as-is` (with reasoning). Unresolved flags **block** "done".
 
@@ -481,7 +481,7 @@ sustainability owner.
 ## Work breakdown
 
 The itemized, sized backlog lives in **[TASKS.md](./TASKS.md)**, organized by the milestones above
-(M0–M4) plus a Backlog/future section. Each task maps to an Elyos Task JSON (schema in
+(M0–M4) plus a Backlog/future section. Each task maps to a Hee-Lee Oss Task JSON (schema in
 `packages/schema/src/schemas.ts`) with id, type, lane, risk tier, deliverable, acceptance criteria,
 and license fields. M0/M1 tasks are partner-independent foundations; M1 gates on clinical+advocate
 reviewers, M2 on a translation reviewer, M3+ on a secured partner — all marked accordingly
@@ -512,7 +512,7 @@ reviewers, M2 on a translation reviewer, M3+ on a secured partner — all marked
 
 ## Dependencies & integrations
 
-- **Elyos donated lane**: `packages/cli` (workspace prep + PR), `packages/core`, `packages/schema`
+- **Hee-Lee Oss donated lane**: `packages/cli` (workspace prep + PR), `packages/core`, `packages/schema`
   (Task JSON + new content schemas). No funded-lane / API-key execution in v0.1.
 - **Public reference sources** (read-only retrieval, license-verified): NCI Dictionary of Cancer
   Terms, ClinicalTrials.gov, NCI Thesaurus, MeSH, MedlinePlus (per-item verification).
@@ -592,10 +592,10 @@ reviewers, M2 on a translation reviewer, M3+ on a secured partner — all marked
 
 ## References
 
-- `C:\code\elyos\CLAUDE.md` — Elyos work rules, lanes, quality bar, refusal & cancer guardrails.
-- `C:\code\elyos\docs\good-deed-definition.md` — good-deed criteria and risk tiers (HIGH ⇒ expert sign-off).
-- `C:\code\elyos\packages\schema\src\schemas.ts` — Task JSON schema (+ new content schemas to add).
-- `C:\code\elyos\planning\ROADMAP.md` — portfolio + Track 8 cancer-research guardrails.
+- `C:\code\hee-lee-oss\CLAUDE.md` — Hee-Lee Oss work rules, lanes, quality bar, refusal & cancer guardrails.
+- `C:\code\hee-lee-oss\docs\good-deed-definition.md` — good-deed criteria and risk tiers (HIGH ⇒ expert sign-off).
+- `C:\code\hee-lee-oss\packages\schema\src\schemas.ts` — Task JSON schema (+ new content schemas to add).
+- `C:\code\hee-lee-oss\planning\ROADMAP.md` — portfolio + Track 8 cancer-research guardrails.
 - NCI Dictionary of Cancer Terms; NCI Thesaurus (verify current open terms).
 - ClinicalTrials.gov "Learn About Studies" / glossary (US Gov, verify embedded third-party).
 - MeSH (NLM) and MedlinePlus content-use notices (verify per item for embedded copyrighted content).
